@@ -1,5 +1,8 @@
 // Windows XP JavaScript Interactions
 
+// Constants
+const DOUBLE_CLICK_DELAY = 300; // milliseconds
+
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize clock
     updateClock();
@@ -42,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentTime = new Date().getTime();
             const timeDiff = currentTime - lastClickTime;
             
-            if (timeDiff < 300 && lastClickedIcon === this) {
+            if (timeDiff < DOUBLE_CLICK_DELAY && lastClickedIcon === this) {
                 handleDoubleClick(this);
             }
             
