@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows XP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Desktop -->
+    <div class="desktop" id="desktop">
+        <!-- Desktop Icons -->
+        <div class="desktop-icon" data-name="My Computer">
+            <div class="icon-image">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="6" width="24" height="18" fill="#7D7D7D" stroke="#000" stroke-width="1"/>
+                    <rect x="5" y="7" width="22" height="14" fill="#008080"/>
+                    <rect x="10" y="24" width="12" height="3" fill="#7D7D7D" stroke="#000" stroke-width="0.5"/>
+                    <rect x="8" y="27" width="16" height="2" fill="#5A5A5A"/>
+                </svg>
+            </div>
+            <div class="icon-label">My Computer</div>
+        </div>
+
+        <div class="desktop-icon" data-name="My Documents">
+            <div class="icon-image">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 4 L20 4 L24 8 L24 28 L8 28 Z" fill="#FFC107" stroke="#000" stroke-width="1"/>
+                    <path d="M20 4 L20 8 L24 8" fill="#FFD54F" stroke="#000" stroke-width="1"/>
+                    <rect x="11" y="12" width="10" height="1.5" fill="#FF6B00"/>
+                    <rect x="11" y="15" width="10" height="1.5" fill="#FF6B00"/>
+                    <rect x="11" y="18" width="7" height="1.5" fill="#FF6B00"/>
+                </svg>
+            </div>
+            <div class="icon-label">My Documents</div>
+        </div>
+
+        <div class="desktop-icon" data-name="Recycle Bin">
+            <div class="icon-image">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 10 L10 28 L22 28 L22 10 Z" fill="#B8B8B8" stroke="#000" stroke-width="1"/>
+                    <rect x="8" y="8" width="16" height="2" fill="#7D7D7D" stroke="#000" stroke-width="1"/>
+                    <rect x="12" y="5" width="8" height="3" fill="#5A5A5A" stroke="#000" stroke-width="0.5"/>
+                    <rect x="12" y="13" width="2" height="10" fill="#6B6B6B"/>
+                    <rect x="18" y="13" width="2" height="10" fill="#6B6B6B"/>
+                </svg>
+            </div>
+            <div class="icon-label">Recycle Bin</div>
+        </div>
+
+        <div class="desktop-icon" data-name="Internet Explorer">
+            <div class="icon-image">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="13" fill="#1E90FF" stroke="#000" stroke-width="1"/>
+                    <path d="M8 16 Q16 8 24 16" fill="none" stroke="#FFD700" stroke-width="2"/>
+                    <path d="M8 16 Q16 24 24 16" fill="none" stroke="#FFD700" stroke-width="2"/>
+                    <circle cx="16" cy="16" r="4" fill="#FFF" stroke="#FFD700" stroke-width="1.5"/>
+                </svg>
+            </div>
+            <div class="icon-label">Internet Explorer</div>
+        </div>
+    </div>
+
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <!-- Start Button -->
+        <button class="start-button" id="startButton">
+            <svg class="start-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3 L12 3 L12 12 L3 12 Z" fill="#FF0000"/>
+                <path d="M13 3 L21 3 L21 12 L13 12 Z" fill="#00FF00"/>
+                <path d="M3 13 L12 13 L12 21 L3 21 Z" fill="#0000FF"/>
+                <path d="M13 13 L21 13 L21 21 L13 21 Z" fill="#FFFF00"/>
+            </svg>
+            <span class="start-text">start</span>
+        </button>
+
+        <!-- Quick Launch -->
+        <div class="quick-launch">
+            <div class="quick-launch-separator"></div>
+        </div>
+
+        <!-- Task Buttons Area -->
+        <div class="task-buttons"></div>
+
+        <!-- System Tray -->
+        <div class="system-tray">
+            <div class="tray-icons">
+                <svg class="tray-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 2 L10 6 L14 6 L11 9 L12 13 L8 10 L4 13 L5 9 L2 6 L6 6 Z" fill="#FFD700"/>
+                </svg>
+                <svg class="tray-icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 10 L2 13 L5 13 L5 10 Z M6 7 L6 13 L9 13 L9 7 Z M10 4 L10 13 L13 13 L13 4 Z" fill="#FFF"/>
+                </svg>
+            </div>
+            <div class="clock" id="clock">12:00 PM</div>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="start-menu" id="startMenu">
+        <!-- User Profile Section -->
+        <div class="start-menu-header">
+            <div class="user-avatar">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="12" r="6" fill="#4A90E2"/>
+                    <path d="M6 28 Q6 20 16 20 Q26 20 26 28 Z" fill="#4A90E2"/>
+                </svg>
+            </div>
+            <div class="user-name">Administrator</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="start-menu-content">
+            <!-- Left Column - Programs -->
+            <div class="start-menu-left">
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#0078D7"/>
+                        </svg>
+                    </div>
+                    <span>Internet</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#FF6B00"/>
+                        </svg>
+                    </div>
+                    <span>E-mail</span>
+                </div>
+                <div class="menu-separator"></div>
+                <div class="menu-item">
+                    <span>Windows Media Player</span>
+                </div>
+                <div class="menu-item">
+                    <span>Windows Messenger</span>
+                </div>
+                <div class="menu-separator"></div>
+                <div class="menu-item all-programs">
+                    <span>All Programs</span>
+                    <span class="arrow">▶</span>
+                </div>
+            </div>
+
+            <!-- Right Column - System Locations -->
+            <div class="start-menu-right">
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#FFC107"/>
+                        </svg>
+                    </div>
+                    <span>My Documents</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#4CAF50"/>
+                        </svg>
+                    </div>
+                    <span>My Recent Documents</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#2196F3"/>
+                        </svg>
+                    </div>
+                    <span>My Pictures</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#9C27B0"/>
+                        </svg>
+                    </div>
+                    <span>My Music</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#7D7D7D"/>
+                        </svg>
+                    </div>
+                    <span>My Computer</span>
+                </div>
+                <div class="menu-separator"></div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#607D8B"/>
+                        </svg>
+                    </div>
+                    <span>Control Panel</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#795548"/>
+                        </svg>
+                    </div>
+                    <span>Help and Support</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#FF5722"/>
+                        </svg>
+                    </div>
+                    <span>Search</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="12" height="12" fill="#00BCD4"/>
+                        </svg>
+                    </div>
+                    <span>Run...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="start-menu-footer">
+            <button class="footer-button">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 2 L6 8 L10 8 Z" fill="#FF6B00"/>
+                </svg>
+                <span>Log Off</span>
+            </button>
+            <button class="footer-button">
+                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="4" width="8" height="8" fill="#FF0000"/>
+                </svg>
+                <span>Turn Off Computer</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
